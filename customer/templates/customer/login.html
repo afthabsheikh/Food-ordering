@@ -1,0 +1,35 @@
+{% extends "customer/Xbase.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <hr>
+
+        {% if messages %}
+        {% comment %} {{message.tags}} {% endcomment %}
+            <div class="alert alert-primary" role="alert">
+                {% for message in messages %}
+                {{message}}
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="password">
+        </div>
+
+        <p>Don't have an account <a href="/register/">Register</a></p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+</div>
+
+{% endblock content %}
