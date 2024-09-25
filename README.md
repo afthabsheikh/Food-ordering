@@ -13,7 +13,7 @@ Responsive Design: Built using Bootstrap for a mobile-first, responsive UI.
 
 **Clone the Repository:**
 
-git clone https://github.com/afthabsheikh/food-ordering-system-demo.git
+git clone https://github.com/afthabsheikh/Food-ordering.git
 
 cd food-ordering-system-demo
 
